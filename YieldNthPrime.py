@@ -10,6 +10,7 @@ def nth_prime(x):
         return 2 
     while prime <x : 
         num += 2
+	  print ("Hello")
     if is_prime(num):
         prime += 1
     return num 

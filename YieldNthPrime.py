@@ -20,3 +20,36 @@ def yield_nth_prime():
 
 print (yield_nth_prime(7))
 
+
+
+
+#Just in case you didn't get the invite for the other repository: 
+
+import time 
+start = time.time()
+
+
+def find_a_list_of_prime_numbers():
+
+    print ('Choose a range (from x through y)')
+    x_value = int(input('Enter x(greater than 1):'))
+    y_value = int(input('Enter y:'))
+
+    list_prime_num = []
+    for number in range(x_value, y_value +1):
+        for n in range (2, number):
+            if number %n==0:
+                break 
+            else: 
+                list_prime_num.append(number)
+    print()
+    print(f'Prime numbers between {x_value} and {y_value} are:')
+    for prime in list_prime_num:
+        print(f'{prime}', end = '')
+    print()
+
+find_a_list_of_prime_numbers()
+
+end = time.time()
+print (f"The total run time for the program was:")
+print(round(end-start,2)),"seconds")

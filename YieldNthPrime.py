@@ -123,7 +123,7 @@ print (f"The total run time for the program was: {round(end-start,4)}")
 #Make a graph of all the prime numbers from 2 to 97 as well as a graph for how long the program took to run 
 
 
-"""
+
 #Start timing the program 
 start = time.time()
 
@@ -167,6 +167,3 @@ plt.ylabel('The Nth Prime Number')
 plt.title('The Prime Numbers from 2 to 97')
 plt.show()
 
-#Set up another graph 
-x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
-y = #This is where I'm stuck. I don't even know what to Google on how to search for how to do this lol but I'll get to this part tomorrow. 

@@ -1,43 +1,51 @@
-#*********************#
-#ControlledExperiment   1/16/24 5:03 pm PT
-#*********************#
 
-#Project Objective: Make a graph of all the prime numbers from 2 to 98 as well as a graph for how long the program took to run 
-
-#Problem: code doesn't work in visual studio code on the PC or MAC
-#Hypothesis: it's either the code or the program and if I change one of those things, then things should work because there aren't any glitches 
-##independent variable(s) to test = which computer I use to run the code; which platform; specific code I use; typing everything in myself into the computer rather than copy and paste from iPad
-###another problem is how do I test the program? 
-
-
-
-#**************************#
+############################
 # Step 1 = Import libraries
-#**************************#
+############################
 
 import time 
 start = time.time()
 
-#********************************#
+###################################
 # Step 2 = Define the Function(s) 
-#********************************#
-
+###################################
 def find_a_list_of_prime_numbers():
     print ('Choose a range (from x through y)')
-    x_value = 2
-    y_value = 100 
+    ##
+    #5:29 pm Tues., 1/16/24, 
+    ##It's here where we were stopped. What I am going to try to do is include the notes I have in the original code. 
+    x_value = int (input ('Enter x (greater than 1):'))
+    y_value = int(input('Enter y:')) 
 
+#We need to initialize, or name and create a space for, an empty list. 
     list_prime_num = []
+#Now we need to set up the conditions tha tguide how we build the list from the empty set. 
+    ## We use "number" to represent any specific value of n we choose from the range
+    ###while remembering that 9n) is the general non-zero or non-single set of 
+    ####integers we test within the range of (x_value to y_value +1)
+
     for number in range (x_value, y_value + 1):
+    #We use y_value + 1 to include the last number in the range if it's the 
+    ##y+value 
         for n in range (2, number):
             if number%n==0:
                 break 
         else: 
             list_prime_num.append(number)
+    #What the above block denotes is that ....
+    ##f the number itself is actually prime, add the number to the list
+    ##to the list of prime numbers that starts with an empty set
+    ###By matching the 'else' with the 'for' rather than 'if', we ensure that
+    ####the numbers do not repeat in the list. 
+    ####The list is also now "correct" because it doesn't only work
+    #### if the number is divisible by something other than 1 or itself
+            
+
+    #now we will show the result of the list function 
     print ()
-    #rn I'm keeping the extra prints just to keep the experiment controlled#
-    print (f'Prime numbers from {x_value} through {y_value}:')
+    print (f'Prime numbers from{x_value}through{y_value}:')
     for prime in list_prime_num:
+            #We will go ahead and print the F string for the prime number
             print (f'{prime},', end = '') 
     print ()
 
@@ -54,9 +62,8 @@ print (round(end-start,2),"seconds")
 ###Not gonna approach the graphing at this time as I'm trying to determine the bug in the first part of the project 
 #******************************************************************************************************************#
 
-#Seeing yolo made me laugh AGAIN haha <3
 
-
+'''
 
 
 ##################
@@ -167,3 +174,4 @@ plt.ylabel('The Nth Prime Number')
 plt.title('The Prime Numbers from 2 to 97')
 plt.show()
 
+'''
